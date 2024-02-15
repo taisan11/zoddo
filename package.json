@@ -1,18 +1,17 @@
 {
   "name": "zoddo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "tsc -p ."
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "preview": "vite preview",
+    "mini": "optools analyze-dts -i dist/index.d.ts -o _analyzed.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.20.0",
-    "ts-node": "^10.9.2",
-    "tsc": "^2.0.4",
-    "typescript": "^5.3.3"
+    "@mizchi/optools": "^0.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
   }
 }
